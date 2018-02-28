@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 10:34:52 by tbleuse           #+#    #+#              #
-#    Updated: 2018/01/10 10:34:56 by tbleuse          ###   ########.fr        #
+#    Updated: 2018/02/28 16:17:56 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,7 +75,6 @@ ft_strsub.c\
 ft_strtrim.c\
 ft_tolower.c\
 ft_toupper.c\
-ft_swap.c\
 ft_sqrt.c\
 ft_lstsize.c\
 ft_lstrev.c\
@@ -89,17 +88,20 @@ all : $(NAME)
 $(NAME) : $(POINT_O) $(NAME).a
 
 %.a: $(POINT_O)
-	ar rc $(NAME).a $(POINT_O)
-	ranlib $(NAME).a
+	@ar rc $(NAME).a $(POINT_O)
+	@ranlib $(NAME).a
+	@echo "$(NAME) have been compiled"
 
 %.o: %.c
-	gcc -c $(FLAGS) $< -o $@
+	@gcc -c $(FLAGS) $< -o $@
 
 clean :
-	/bin/rm -f $(POINT_O)
+	@/bin/rm -f $(POINT_O)
+	@echo "$(NAME) objects have been deleted"
 
 fclean : clean
-	/bin/rm -f $(NAME).a
+	@/bin/rm -f $(NAME).a
+	@echo "$(NAME) have been deleted"
 
 lib : all clean
 

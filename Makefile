@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/22 14:30:08 by tbleuse           #+#    #+#              #
-#    Updated: 2018/02/27 18:19:19 by tbleuse          ###   ########.fr        #
+#    Updated: 2018/02/28 17:15:16 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,34 +21,14 @@ CC = gcc
 FLAGS = -Wall -Wextra -Werror
 
 SRC_NAME = 	main_checker.c					\
-			a								\
-			a								\
-			a								\
-			a								\
-			a								\
-			a								\
-			a								\
-			a								\
-			a								\
-			a								\
-			a								\
-			a								\
-			a								\
+			ft_error.c						\
+			ft_what_to_do.c					\
+			ft_swap.c						\
+			ft_push.c						\
+			ft_rotate.c						\
+			ft_reverse_rotate.c				\
 
 SRC_NAME2 = main_push_swap.c				\
-			a								\
-			a								\
-			a								\
-			a								\
-			a								\
-			a								\
-			a								\
-			a								\
-			a								\
-			a								\
-			a								\
-			a								\
-			
 
 SRC = $(addprefix checker_functions/, $(SRC_NAME))
 SRC2 = $(addprefix push_swap_functions/, $(SRC_NAME2))
@@ -62,11 +42,11 @@ $(LIBFT) :
 	@make -C $(LIBFT)
 
 $(NAME) : $(OBJ)
-	@$(CC) $(FLAGS) $(OBJ) $(LIBFT)/libft.a -c $(NAME)
+	@$(CC) $(FLAGS) $(OBJ) $(LIBFT)/libft.a -o $(NAME)
 	@echo "$(NAME) have been compiled"
 
 $(NAME2) : $(OBJ2)
-	@$(CC) $(FLAGS) $(OBJ2) $(LIBFT)/libft.a -c $(NAME2)
+	@$(CC) $(FLAGS) $(OBJ2) $(LIBFT)/libft.a -o $(NAME2)
 	@echo "$(NAME2) have been compiled"
 
 %.o : %.c
@@ -78,7 +58,7 @@ clean :
 	@echo "$(NAME) objects have been deleted"
 	@echo "$(NAME2) objects have been deleted"
 
-fclean :
+fclean : clean
 	@make fclean -C $(LIBFT)
 	@/bin/rm -f $(NAME) $(NAME2)
 	@echo "$(NAME) have been deleted"
@@ -86,4 +66,4 @@ fclean :
 
 re : fclean all
 
-.PHONY : all clean fclean re
+.PHONY : all clean fclean re libft
