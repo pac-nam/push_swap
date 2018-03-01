@@ -20,15 +20,18 @@ CC = gcc
 
 FLAGS = -Wall -Wextra -Werror
 
-SRC_NAME = 	main_checker.c					\
-			ft_error.c						\
-			ft_what_to_do.c					\
-			ft_swap.c						\
-			ft_push.c						\
-			ft_rotate.c						\
-			ft_reverse_rotate.c				\
+SRC_NAME =	main_checker.c		\
+		ft_what_to_do.c		\
+		ft_swap.c		\
+		ft_push.c		\
+		ft_rotate.c		\
+		ft_reverse_rotate.c	\
+		ft_debug.c		\
 
-SRC_NAME2 = main_push_swap.c				\
+SRC_NAME2 =	main_push_swap.c	\
+		ft_isnumber.c		\
+		ft_options.c		\
+		ft_init_pile.c		\
 
 SRC = $(addprefix checker_functions/, $(SRC_NAME))
 SRC2 = $(addprefix push_swap_functions/, $(SRC_NAME2))

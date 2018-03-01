@@ -104,6 +104,7 @@ void				ft_lstpushfront(t_list **begin_list,
 							void *data, size_t size);
 void				ft_lstpushback(t_list **begin_list,
 							void *data, size_t size);
+int				ft_return(int fd, char *str);
 int					ft_gnl(const int fd, char **line);
 
 #endif

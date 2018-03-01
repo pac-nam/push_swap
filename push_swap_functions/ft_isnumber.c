@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   ft_isnumber.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/28 13:33:51 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/02/28 17:41:01 by tbleuse          ###   ########.fr       */
+/*   Created: 2018/02/28 11:37:56 by tbleuse           #+#    #+#             */
+/*   Updated: 2018/02/28 17:57:03 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/checker.h"
+#include "../header/push_swap.h"
 
-int		ft_ko(void)
+int	ft_isnumber(char *str)
 {
-	write(2, "KO\n", 3);
-	return (0);
-}
+	int	i;
 
-int		ft_error(void)
-{
-	write(2, "Error\n", 6);
-	return (0);
+	i = 0;
+	if (str[i] == '-')
+		++i;
+	while (str[i])
+	{
+		if (!ft_isdigit(str[i]))
+			return (0);
+		++i;
+	}
+	return (1);
 }

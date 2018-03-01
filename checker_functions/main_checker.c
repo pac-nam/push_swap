@@ -12,34 +12,13 @@
 
 #include "../header/checker.h"
 
-
-#include <stdio.h>
-static void		ft_debug(int *a, int *b, char *str)
-{
-	int		i;
-
-	i = 1;
-	printf("%s pile_a[0] = %d pile_b[0] = %d\npile_a\n", str, a[0], b[0]);
-	while (i - 1 < a[0])
-	{
-		ft_putstr(ft_itoa(a[i++]));
-		ft_putchar(' ');
-	}
-	ft_putstr("\npile_b ");
-	i = 1;
-	while (i - 1 < b[0])
-	{
-		ft_putstr(ft_itoa(b[i++]));
-		ft_putchar(' ');
-	}
-	ft_putchar('\n');
-}
-
 static int		ft_isnumber(char *str)
 {
 	int		i;
 
 	i = 0;
+	if (str[i] == '-')
+		++i;
 	while (str[i])
 	{
 		if (!ft_isdigit(str[i]))
@@ -49,7 +28,7 @@ static int		ft_isnumber(char *str)
 	return (1);
 }
 
-static int		ft_second_main(int ac, int **pile_a, int **pile_b)
+static int		ft_second_main(int **pile_a, int **pile_b)
 {
 	char	*line;
 	int		i;
@@ -58,18 +37,17 @@ static int		ft_second_main(int ac, int **pile_a, int **pile_b)
 	while (ft_gnl(0, &line) > 0)
 	{
 		if (!ft_what_to_do(pile_a, pile_b, line))
-			return (ft_error());
-ft_debug(*pile_a, *pile_b, line);
+			return (ft_return(1, "Error\n"));
 		ft_strdel(&line);
 	}
-	while (i < ac - 1)
+	while (i < (*pile_a)[0])
 	{
 		if ((*pile_a)[i] > (*pile_a)[i + 1])
-			return (ft_ko());
+			return (ft_return(1, "KO\n"));
 		++i;
 	}
-	if (pile_b[0] != 0)
-		return (ft_ko());
+	if ((*pile_b)[0] != 0)
+		return (ft_return(1, "KO\n"));
 	write(1, "OK\n", 3);
 	return (1);
 }
@@ -84,17 +62,17 @@ int				main(int ac, char **av)
 	i = 0;
 	if (!(pile_a = (int*)malloc(sizeof(int) * (ac))) ||
 			!(pile_b = (int*)malloc(sizeof(int) * (ac))))
-		return (ft_error());
+		return (ft_return(1, "Error\n"));
 	while(++i < ac)
 	{
 		j = 0;
 		if (!ft_isnumber(av[i]))
-			return (ft_error());
+			return (ft_return(1, "Error\n"));
 		pile_a[i] = ft_atoi(av[i]);
 	}
 	pile_a[0] = ac - 1;
 	pile_b[0] = 0;
-	ft_second_main(ac, &pile_a, &pile_b);
+	ft_second_main(&pile_a, &pile_b);
 	free(pile_a);
 	free(pile_b);
 	return (0);

@@ -79,6 +79,7 @@ ft_sqrt.c\
 ft_lstsize.c\
 ft_lstrev.c\
 ft_lstpushback.c\
+ft_return.c\
 ft_gnl.c\
 
 POINT_O = $(POINT_C:.c=.o)

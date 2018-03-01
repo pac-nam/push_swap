@@ -19,8 +19,6 @@
 
 # include "../libft/libft.h"
 
-int			ft_error(void);
-int			ft_ko(void);
 int			ft_what_to_do(int **pile_a, int **pile_b, char *str);
 
 int			ft_swap(int **pile);
@@ -30,5 +28,7 @@ int			ft_rotate(int **pile);
 int			ft_double_rotate(int **a, int **b);
 int			ft_reverse_rotate(int **pile);
 int			ft_double_reverse_rotate(int **a, int **b);
+
+void			ft_debug(int *a, int *b, char *str);
 
 # endif
