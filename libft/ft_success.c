@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isnumber.c                                      :+:      :+:    :+:   */
+/*   ft_success.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 11:37:56 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/02 12:15:29 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/02 10:31:53 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/push_swap.h"
+#include "libft.h"
 
-int	ft_isnumber(char *str)
+int		ft_success(char *str)
 {
-	int	i;
-
-	i = 0;
-	if (str[i] == '-' || str[i] == '+')
-		++i;
-	while (str[i] && !ft_strchr(" \n\t\f\r\v", str[i]))
-	{
-		if (!ft_isdigit(str[i]))
-			return (0);
-		++i;
-	}
-	return (1);
+	write(1, str, ft_strlen(str));
+	return (0);
 }

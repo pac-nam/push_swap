@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 14:18:20 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/02/28 17:15:45 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/02 12:28:38 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,7 @@ int		ft_what_to_do(int **pile_a, int **pile_b, char *str)
 		return (ft_reverse_rotate(pile_b));
 	if (!ft_strcmp(str, "rrr"))
 		return (ft_double_reverse_rotate(pile_a, pile_b));
+	if (!ft_strcmp(str, ""))
+		return (2);
 	return (0);
 }

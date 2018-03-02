@@ -6,24 +6,17 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:54:05 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/02/28 17:19:29 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/02 12:20:42 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# ifndef UNISTD_H
-#  define UNISTD_H
-#  include <unistd.h>
-# endif
-# ifndef STDLIB_H
-#  define STDLIB_H
-#  include <stdlib.h>
-# endif
-# ifndef STRING_H
-#  define STRING_H
-#  include <string.h>
-# endif
+# include <sys/types.h>
+# include <sys/uio.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <string.h>
 
 # define BUFF_SIZE 10
 
@@ -104,7 +97,8 @@ void				ft_lstpushfront(t_list **begin_list,
 							void *data, size_t size);
 void				ft_lstpushback(t_list **begin_list,
 							void *data, size_t size);
-int				ft_return(int fd, char *str);
+int					ft_error(char *str);
+int					ft_success(char *str);
 int					ft_gnl(const int fd, char **line);
 
 #endif

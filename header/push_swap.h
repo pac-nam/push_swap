@@ -6,15 +6,14 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 11:44:16 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/02/28 17:41:11 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/02 12:20:56 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-#include <sys/types.h>
-#include <sys/uio.h>
+#include <fcntl.h>
 #include "../libft/libft.h"
 
 int	ft_options(int **options, int ac, char **av);

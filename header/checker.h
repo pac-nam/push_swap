@@ -6,20 +6,21 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 11:44:16 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/02/28 17:41:11 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/02 12:20:48 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHECKER_H
 # define CHECKER_H
 
-# include <unistd.h>
-# include <sys/types.h>
-# include <sys/uio.h>
+# include <fcntl.h>
 
 # include "../libft/libft.h"
 
+int			ft_options(int **options, int ac, char **av);
 int			ft_what_to_do(int **pile_a, int **pile_b, char *str);
+int			ft_isnumber(char *str);
+int			ft_init_pile_a(int **pile_a, int ac, char **av, int *option);
 
 int			ft_swap(int **pile);
 int			ft_double_swap(int **a, int **b);

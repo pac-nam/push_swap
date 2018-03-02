@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 16:07:01 by tbleuse           #+#    #+#             */
-/*   Updated: 2017/11/22 12:04:14 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/02 10:37:43 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	ft_count_char(char const *str)
 	return (len);
 }
 
-static char	*ft_error(void)
+static char	*ft_error_strtrim(void)
 {
 	char	*str;
 
@@ -55,7 +55,7 @@ char		*ft_strtrim(char const *s)
 	i = 0;
 	j = 0;
 	if (s == NULL)
-		return (ft_error());
+		return (ft_error_strtrim());
 	len = ft_count_char(s);
 	if (len < 0)
 		len = 0;

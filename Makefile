@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/22 14:30:08 by tbleuse           #+#    #+#              #
-#    Updated: 2018/02/28 17:15:16 by tbleuse          ###   ########.fr        #
+#    Updated: 2018/03/02 12:13:35 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,17 +21,20 @@ CC = gcc
 FLAGS = -Wall -Wextra -Werror
 
 SRC_NAME =	main_checker.c		\
-		ft_what_to_do.c		\
-		ft_swap.c		\
-		ft_push.c		\
-		ft_rotate.c		\
-		ft_reverse_rotate.c	\
-		ft_debug.c		\
+			ft_what_to_do.c		\
+			ft_options.c		\
+			ft_isnumber.c		\
+			ft_init_pile.c		\
+			ft_swap.c			\
+			ft_push.c			\
+			ft_rotate.c			\
+			ft_reverse_rotate.c	\
+			ft_debug.c			\
 
 SRC_NAME2 =	main_push_swap.c	\
-		ft_isnumber.c		\
-		ft_options.c		\
-		ft_init_pile.c		\
+			ft_isnumber.c		\
+			ft_options.c		\
+			ft_init_pile.c		\
 
 SRC = $(addprefix checker_functions/, $(SRC_NAME))
 SRC2 = $(addprefix push_swap_functions/, $(SRC_NAME2))
