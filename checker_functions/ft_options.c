@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 11:37:56 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/02 12:48:31 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/03 18:45:04 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,13 @@
 */
 
 
-#include <stdio.h>
 static int	ft_valid_option(char **av, int index, int **options)
 {
-	printf("%s\n\n", av[index]);
 	if (!ft_strcmp(av[index - 1], "-f"))
 		return (1);
-	if (!ft_strcmp(av[index], "-f"))
+	if (!ft_strcmp(av[index], "-f") && (*options)[1] == 0)
 		(*options)[1] = index + 1;
-	else if (!ft_strcmp(av[index], "-v"))
+	else if (!ft_strcmp(av[index], "-v") && (*options)[2] == 0)
 		(*options)[2] = 1;
 	else
 		return (0);
@@ -40,7 +38,7 @@ int		ft_options(int **options, int ac, char **av)
 	i = 1;
 	if (!((*options) = (int*)malloc(sizeof(int) * 3)))
 		return (0);
-	while (!ft_isnumber(av[i]) && i < ac)
+	while (!ft_isnumber(av[i]) && i < ac - 1)
 		++i;
 	(*options)[0] = i;
 	(*options)[1] = 0;
@@ -50,7 +48,7 @@ int		ft_options(int **options, int ac, char **av)
 	{
 		if (!ft_valid_option(av, i, options))
 			return (ft_error("invalid argument\n"));
-		++i;
+		--i;
 	}
 	return (1);
 }

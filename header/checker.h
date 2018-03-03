@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 11:44:16 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/02 12:20:48 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/03 14:36:17 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CHECKER_H
 
 # include <fcntl.h>
+# include <stdio.h>
 
 # include "../libft/libft.h"
 

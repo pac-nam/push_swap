@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 11:37:56 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/02 12:40:23 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/03 18:45:01 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ int				main(int ac, char **av)
 
 	if (!ft_options(&options, ac, av))
 		return (0);
-	ft_putstr("i m here\n");
 	if (!ft_init_pile_a(&pile_a, ac, av, options))
 		return (0);
 	if (!(pile_b = (int*)malloc(sizeof(int) * (pile_a[0] + 1))))
