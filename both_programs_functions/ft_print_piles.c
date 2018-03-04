@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rotate.c                                        :+:      :+:    :+:   */
+/*   ft_print_piles.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/28 14:42:06 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/04 16:00:58 by tbleuse          ###   ########.fr       */
+/*   Created: 2018/03/04 12:47:50 by tbleuse           #+#    #+#             */
+/*   Updated: 2018/03/04 13:46:31 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_rotate(int **pile)
+#include "../header/both_programs.h"
+
+void	ft_print_piles(int *pile_a, int *pile_b, char *str)
 {
 	int		index;
-	int		tmp;
 
 	index = 1;
-	tmp = (*pile)[1];
-	while (index < (*pile)[0])
+	ft_putstr(str);
+	write(1, "\npile_a : ", 10);
+	while (index <= pile_a[0])
 	{
-		(*pile)[index] = (*pile)[index + 1];
-		++index;
+		ft_putnbr(pile_a[index++]);
+		write(1, " ", 1);
 	}
-	(*pile)[index] = tmp;
-	return (1);
-}
-
-int			ft_double_rotate(int **pile_a, int **pile_b)
-{
-	ft_rotate(pile_a);
-	ft_rotate(pile_b);
-	return (1);
+	index = 1;
+	write(1, "\npile_b : ", 10);
+	while (index <= pile_b[0])
+	{
+		ft_putnbr(pile_b[index++]);
+		write(1, " ", 1);
+	}
+	write(1, "\n----------------------------------------\n", 42);
 }

@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:54:05 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/02 12:20:42 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/04 12:09:33 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,8 +97,6 @@ void				ft_lstpushfront(t_list **begin_list,
 							void *data, size_t size);
 void				ft_lstpushback(t_list **begin_list,
 							void *data, size_t size);
-int					ft_error(char *str);
-int					ft_success(char *str);
 int					ft_gnl(const int fd, char **line);
 
 #endif

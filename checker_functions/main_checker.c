@@ -6,13 +6,13 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 11:37:56 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/03 18:45:01 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/04 17:01:39 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/checker.h"
 
-static int		ft_second_main(int **pile_a, int **pile_b)
+static int		ft_second_main(int **pile_a, int **pile_b, int *options)
 {
 	char	*line;
 	int		i;
@@ -22,20 +22,22 @@ static int		ft_second_main(int **pile_a, int **pile_b)
 	while (ft_gnl(0, &line) > 0)
 	{
 		if (!(verif = ft_what_to_do(pile_a, pile_b, line)))
-			return (ft_error("Error\n"));
+			return (ft_error(options[2], "invalid instruction\n"));
+		if (options[3])
+			ft_print_piles(*pile_a, *pile_b, line);
 		ft_strdel(&line);
 		if (verif == 2)
-			break;
+			break ;
 	}
 	while (i < (*pile_a)[0])
 	{
 		if ((*pile_a)[i] > (*pile_a)[i + 1])
-			return (ft_success("KO\n"));
+			return (ft_failure(options[2], "pile_a is not well sorted\n"));
 		++i;
 	}
 	if ((*pile_b)[0] != 0)
-		return (ft_success("KO\n"));
-	return(ft_success("OK\n"));
+		return (ft_failure(options[2], "pile_b is not empty\n"));
+	return (ft_success(0, ""));
 	return (1);
 }
 
@@ -52,7 +54,7 @@ int				main(int ac, char **av)
 	if (!(pile_b = (int*)malloc(sizeof(int) * (pile_a[0] + 1))))
 		return (0);
 	pile_b[0] = 0;
-	ft_second_main(&pile_a, &pile_b);
+	ft_second_main(&pile_a, &pile_b, options);
 	free(pile_a);
 	free(pile_b);
 	free(options);

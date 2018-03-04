@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 10:34:52 by tbleuse           #+#    #+#              #
-#    Updated: 2018/03/02 10:29:27 by tbleuse          ###   ########.fr        #
+#    Updated: 2018/03/04 12:09:18 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,8 +79,6 @@ ft_sqrt.c\
 ft_lstsize.c\
 ft_lstrev.c\
 ft_lstpushback.c\
-ft_error.c\
-ft_success.c\
 ft_gnl.c\
 
 POINT_O = $(POINT_C:.c=.o)

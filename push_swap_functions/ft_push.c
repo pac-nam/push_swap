@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_push.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/28 11:44:16 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/04 12:06:46 by tbleuse          ###   ########.fr       */
+/*   Created: 2018/02/28 14:41:51 by tbleuse           #+#    #+#             */
+/*   Updated: 2018/03/04 13:50:08 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+int		ft_push(int **put_on, int **pick_one)
+{
+	int		nb;
+	int		index;
 
-# include "./both_programs.h"
-# include "../libft/libft.h"
-
-int	ft_options(int **options, int ac, char **av);
-
-#endif
+	index = 0;
+	if ((*pick_one)[0] == 0)
+		return (1);
+	nb = (*pick_one)[1];
+	while (++index < (*pick_one)[0])
+		(*pick_one)[index] = (*pick_one)[index + 1];
+	--((*pick_one)[0]);
+	index = (*put_on)[0] + 2;
+	while (--index > 1)
+		(*put_on)[index] = (*put_on)[index - 1];
+	++((*put_on)[0]);
+	(*put_on)[1] = nb;
+	return (1);
+}
