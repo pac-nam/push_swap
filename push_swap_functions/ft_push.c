@@ -6,14 +6,15 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 14:41:51 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/04 13:50:08 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/05 14:12:20 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_push(int **put_on, int **pick_one)
+int		ft_push(int **put_on, int **pick_one, char **instructions, char *str)
 {
 	int		nb;
 	int		index;
+	char	*strtmp;
 
 	index = 0;
 	if ((*pick_one)[0] == 0)
@@ -27,5 +28,9 @@ int		ft_push(int **put_on, int **pick_one)
 		(*put_on)[index] = (*put_on)[index - 1];
 	++((*put_on)[0]);
 	(*put_on)[1] = nb;
+	strtmp = *instructions;
+	if (!(*instructions = ft_strjoin(*instructions, str)))
+		return (0);
+	ft_strdel(&strtmp);
 	return (1);
 }
