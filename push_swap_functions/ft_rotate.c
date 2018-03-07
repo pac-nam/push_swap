@@ -6,9 +6,11 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 14:42:06 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/05 14:15:18 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/07 12:32:39 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../header/push_swap.h"
 
 int		ft_rotate(int **pile, char **instructions, char *str)
 {

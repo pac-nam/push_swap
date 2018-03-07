@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/04 11:57:35 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/04 16:55:04 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/07 11:26:23 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 # define BOTH_PROGRAMS_H
 
 # include <fcntl.h>
-# include <stdio.h>
 
-# include "./both_programs.h"
-# include "../libft/libft.h"
+# include "../libft/header/libft.h"
 
 int			ft_isnumber(char *str);
 int			ft_init_pile_a(int **pile_a, int ac, char **av, int *option);

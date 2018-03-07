@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 14:18:20 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/04 12:40:12 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/07 11:25:33 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 int		ft_what_to_do(int **pile_a, int **pile_b, char *str)
 {
 	if (!ft_strcmp(str, "sa"))
-		return (ft_swap(pile_a));
+		return (ft_checker_swap(pile_a));
 	if (!ft_strcmp(str, "sb"))
-		return (ft_swap(pile_b));
+		return (ft_checker_swap(pile_b));
 	if (!ft_strcmp(str, "ss"))
 		return (ft_double_swap(pile_a, pile_b));
 	if (!ft_strcmp(str, "pa"))

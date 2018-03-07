@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/22 14:30:08 by tbleuse           #+#    #+#              #
-#    Updated: 2018/03/04 18:06:54 by tbleuse          ###   ########.fr        #
+#    Updated: 2018/03/07 18:03:56 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,11 @@ SRC_NAME =	main_checker.c		\
 			ft_reverse_rotate.c	\
 
 SRC_NAME2 =	main_push_swap.c	\
+			ft_push_swap.c		\
 			ft_options.c		\
+			ft_init_stock.c		\
+			ft_index_of_nb.c	\
+			ft_target.c			\
 			ft_swap.c			\
 			ft_push.c			\
 			ft_rotate.c			\
@@ -76,5 +80,7 @@ fclean : clean
 	@echo "$(NAME2) have been deleted"
 
 re : fclean all
+
+programs : all clean
 
 .PHONY : all clean fclean re libft

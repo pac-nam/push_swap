@@ -6,9 +6,11 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 14:41:58 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/05 14:16:55 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/07 12:33:49 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../header/push_swap.h"
 
 int		ft_reverse_rotate(int **pile, char **instructions, char *str)
 {
@@ -27,6 +29,7 @@ int		ft_reverse_rotate(int **pile, char **instructions, char *str)
 	strtmp = *instructions;
 	if (!(*instructions = ft_strjoin(*instructions, str)))
 		return (0);
+	ft_strdel(&strtmp);
 	return (1);
 }
 

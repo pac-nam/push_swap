@@ -6,9 +6,11 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 14:41:51 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/05 14:12:20 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/07 12:32:05 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../header/push_swap.h"
 
 int		ft_push(int **put_on, int **pick_one, char **instructions, char *str)
 {
