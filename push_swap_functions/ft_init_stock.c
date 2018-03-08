@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 11:37:56 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/07 18:00:21 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/08 14:15:33 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@ static int	ft_stop_here(t_ps_struct *stock)
 
 int			ft_init_stock(t_ps_struct *stock, int ac, char **av)
 {
+	int		i;
+
+	i = -1;
 	if (!ft_options(&(stock->opt), ac, av) ||
 			!ft_init_pile_a(&(stock->a), ac, av, stock->opt))
 		return (0);
@@ -31,8 +34,9 @@ int			ft_init_stock(t_ps_struct *stock, int ac, char **av)
 			!(stock->str = (char*)malloc(1)))
 		return (0);
 	stock->b[0] = 0;
-	stock->ref[0] = stock->a[0];
-	stock->ref = ft_sort_int_tab(stock->a, stock->a[0] + 1);
+	while (++i <= stock->a[0])
+		stock->ref[i] = stock->a[i];
+	stock->ref = ft_sort_int_tab(stock->ref, stock->ref[0] + 1);
 	stock->str[0] = '\0';
 	return (1);
 }

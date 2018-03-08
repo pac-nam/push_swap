@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/07 11:30:15 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/07 18:01:15 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/08 14:19:53 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ static int	ft_second_push_swap(t_ps_struct *stock, int ref)
 	target_index = ft_index_of_nb(stock->a, target);
 	if (!stock->a[0])
 		return (1);
-//	write(1, "iwujndv\n", 8);
 	if (target_index > stock->a[0] / 2)
 		while (stock->a[1] != target)
 			ft_rotate(&stock->a, &stock->str, "ra\n");
@@ -59,7 +58,7 @@ int			ft_push_swap(t_ps_struct *stock)
 	ft_push(&stock->b, &stock->a, &stock->str, "pb\n");
 	if (!ft_second_push_swap(stock, ref))
 		return (0);
-	while (stock->b)
+	while (stock->b[0])
 		ft_push(&stock->a, &stock->b, &stock->str, "pa\n");
 	return (1);
 }
