@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/07 16:03:58 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/07 17:47:11 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/08 18:20:19 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ static int	ft_more_close_of(int *tab, int min, int max)
 	int		min_index;
 	int		max_index;
 
-	min_index = ft_index_of_nb(tab, min);
-	max_index = ft_index_of_nb(tab, max);
+	if (!(min_index = ft_index_of_nb(tab, min)))
+		return (-1);
+	if (!(max_index = ft_index_of_nb(tab, max)))
+		return (1);
 	tmp = tab[0] - min_index;
 	if (tmp < min_index)
 		min_index = tmp;
