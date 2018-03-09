@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 11:44:16 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/07 18:04:59 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/09 13:17:16 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct	s_ps_struct
 }				t_ps_struct;
 
 int				ft_push_swap(t_ps_struct *stock);
+int				ft_double_sort(t_ps_struct *stock);
 int				ft_init_stock(t_ps_struct *stock, int ac, char **av);
 int				ft_options(int **options, int ac, char **av);
 int				ft_index_of_nb(int *tab, int nb);

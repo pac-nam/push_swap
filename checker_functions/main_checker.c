@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 11:37:56 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/08 18:29:55 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/09 13:17:09 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int		ft_second_main(int **pile_a, int **pile_b, int *options, int *c)
 			return (ft_failure(options[2], "pile_a is not well sorted\n"));
 	if ((*pile_b)[0] != 0)
 		return (ft_failure(options[2], "pile_b is not empty\n"));
-	return (ft_success(options[2], "OK with "));
+	return (ft_success(options[2], "OK, pile of "));
 }
 
 int				main(int ac, char **av)
@@ -52,11 +52,10 @@ int				main(int ac, char **av)
 	if (!(pile_b = (int*)malloc(sizeof(int) * (pile_a[0] + 1))))
 		return (0);
 	pile_b[0] = 0;
+	if (options[3])
+		ft_print_piles(pile_a, pile_b, "start");
 	if (ft_second_main(&pile_a, &pile_b, options, &count) && options[2])
-	{
-		ft_putnbr(count);
-		ft_putstr(" instruction(s)\n");
-	}
+		ft_printf("%d int(s) sorted with %d instruction(s)", pile_a[0], count);
 	free(pile_a);
 	free(pile_b);
 	free(options);
