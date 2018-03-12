@@ -31,6 +31,7 @@ SRC_NAME =	main_checker.c		\
 SRC_NAME2 =	main_push_swap.c	\
 			ft_push_swap.c		\
 			ft_double_sort.c	\
+			ft_brut_sort.c		\
 			ft_options.c		\
 			ft_init_stock.c		\
 			ft_index_of_nb.c	\

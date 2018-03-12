@@ -26,6 +26,7 @@ typedef struct	s_ps_struct
 
 int				ft_push_swap(t_ps_struct *stock);
 int				ft_double_sort(t_ps_struct *stock);
+int				ft_brut_sort(t_ps_struct *stock);
 int				ft_init_stock(t_ps_struct *stock, int ac, char **av);
 int				ft_options(int **options, int ac, char **av);
 int				ft_index_of_nb(int *tab, int nb);
