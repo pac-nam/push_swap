@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_push_swap.c                                     :+:      :+:    :+:   */
+/*   ft_del_last_directive.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/07 11:30:15 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/12 16:03:30 by tbleuse          ###   ########.fr       */
+/*   Created: 2018/03/12 11:47:11 by tbleuse           #+#    #+#             */
+/*   Updated: 2018/03/12 13:57:34 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
 
-//	ft_printf("a[0] = %d | a[1] = %d | a[2] = %d | a[3] = %d\n", stock->ref[0], stock->ref[1], stock->ref[2], stock->ref[3]);
-
-int			ft_push_swap(t_ps_struct *stock)
+int		ft_del_last_directive(char **str)
 {
-	return (ft_double_sort(stock));
+	int		len;
+	int		i;
+	char	*tmp;
+
+	tmp = *str;
+	len = ft_strlen(*str) - 2;
+	while (len != '\n' && len)
+		--len;
+	++len;
+	if (!(*str = (char*)malloc(len + 1)))
+		return (0);
+	(*str)[len] = '\0';
+	i = -1;
+	while (++i < len)
+		(*str)[i] = tmp[i];
+	ft_strdel(&tmp);
+	return (1);
 }

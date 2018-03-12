@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_push_swap.c                                     :+:      :+:    :+:   */
+/*   ft_tab_is_sort.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/07 11:30:15 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/12 16:03:30 by tbleuse          ###   ########.fr       */
+/*   Created: 2018/02/28 11:37:56 by tbleuse           #+#    #+#             */
+/*   Updated: 2018/03/12 11:52:18 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/push_swap.h"
-
-//	ft_printf("a[0] = %d | a[1] = %d | a[2] = %d | a[3] = %d\n", stock->ref[0], stock->ref[1], stock->ref[2], stock->ref[3]);
-
-int			ft_push_swap(t_ps_struct *stock)
+int	ft_tab_is_sort(int *tab)
 {
-	return (ft_double_sort(stock));
+	int		i;
+
+	i = 0;
+	while (++i < tab[0])
+		if (tab[i] > tab[i + 1])
+			return (0);
+	return (1);
 }

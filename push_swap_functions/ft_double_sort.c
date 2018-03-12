@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/07 11:30:15 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/09 13:17:13 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/12 16:55:09 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ static int	ft_second_double_sort(t_ps_struct *stock, int ref)
 	int		target;
 	int		target_index;
 
-	target = ft_target(stock->a, ref);
-	target_index = ft_index_of_nb(stock->a, target);
 	if (!stock->a[0])
 		return (1);
-	if (target_index > stock->a[0] / 2)
+	target = ft_target(stock->a, ref);
+	target_index = ft_index_of_nb(stock->a, target);
+	if (target_index > stock->a[0] / 2 + 1)
 		while (stock->a[1] != target)
 			ft_reverse_rotate(&stock->a, &stock->str, "rra\n");
 	else

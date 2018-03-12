@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/22 14:30:08 by tbleuse           #+#    #+#              #
-#    Updated: 2018/03/09 12:16:39 by tbleuse          ###   ########.fr        #
+#    Updated: 2018/03/12 14:44:24 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,31 +20,32 @@ CC = gcc
 
 FLAGS = -Wall -Wextra -Werror
 
-SRC_NAME =	main_checker.c		\
-			ft_what_to_do.c		\
-			ft_options.c		\
-			ft_swap.c			\
-			ft_push.c			\
-			ft_rotate.c			\
-			ft_reverse_rotate.c	\
+SRC_NAME =	main_checker.c			\
+			ft_what_to_do.c			\
+			ft_options.c			\
+			ft_swap.c				\
+			ft_push.c				\
+			ft_rotate.c				\
+			ft_reverse_rotate.c		\
 
-SRC_NAME2 =	main_push_swap.c	\
-			ft_push_swap.c		\
-			ft_double_sort.c	\
-			ft_brut_sort.c		\
-			ft_options.c		\
-			ft_init_stock.c		\
-			ft_index_of_nb.c	\
-			ft_target.c			\
-			ft_swap.c			\
-			ft_push.c			\
-			ft_rotate.c			\
-			ft_reverse_rotate.c	\
+SRC_NAME2 =	main_push_swap.c		\
+			ft_push_swap.c			\
+			ft_double_sort.c		\
+			ft_options.c			\
+			ft_init_stock.c			\
+			ft_index_of_nb.c		\
+			ft_target.c				\
+			ft_tab_is_sort.c		\
+			ft_del_last_directive.c	\
+			ft_swap.c				\
+			ft_push.c				\
+			ft_rotate.c				\
+			ft_reverse_rotate.c		\
 
-SRC_NAME3 =	ft_isnumber.c		\
-			ft_init_pile.c		\
-			ft_message.c		\
-			ft_print_piles.c	\
+SRC_NAME3 =	ft_isnumber.c			\
+			ft_init_pile.c			\
+			ft_message.c			\
+			ft_print_piles.c		\
 
 SRC = $(addprefix checker_functions/, $(SRC_NAME))
 SRC2 = $(addprefix push_swap_functions/, $(SRC_NAME2))

@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 11:37:56 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/04 12:18:47 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/12 10:27:20 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		ft_success(int mode, char *str)
 int		ft_failure(int mode, char *str)
 {
 	if (mode == 0)
-		write(1, "KO\n", 6);
+		write(1, "KO\n", 3);
 	else
 		write(1, str, ft_strlen(str));
 	return (0);
