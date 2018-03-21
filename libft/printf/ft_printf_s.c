@@ -6,11 +6,14 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/10 16:48:06 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 18:25:24 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 15:50:34 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include <unistd.h>
+#include "../header/print.h"
+#include "../header/printf.h"
+#include "../header/str.h"
 
 static int	ft_printf_s_rest(int *info)
 {

@@ -6,11 +6,11 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 15:40:16 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 17:52:07 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 14:00:44 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include "../header/conversion.h"
 
 int			ft_wc_convert(char *s, wchar_t wchar)
 {

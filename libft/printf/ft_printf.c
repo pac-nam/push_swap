@@ -6,11 +6,16 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/21 13:56:12 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 18:22:40 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 15:48:07 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include <stdarg.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include "../header/memory.h"
+#include "../header/printf.h"
+#include "../header/str.h"
 
 static int	ft_print_str(const char *format, int *index)
 {

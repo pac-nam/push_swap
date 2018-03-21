@@ -6,11 +6,12 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/17 15:59:51 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 17:16:24 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 16:08:45 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include <stdlib.h>
+#include "../header/str.h"
 
 int			ft_addncharbefore(int n, char c, char **str)
 {

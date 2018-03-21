@@ -6,11 +6,12 @@
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/13 10:41:34 by exam              #+#    #+#             */
-/*   Updated: 2018/03/07 10:44:45 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 13:56:59 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include <stdlib.h>
+#include "../header/str.h"
 
 static char	*ft_special_itoa(int base)
 {

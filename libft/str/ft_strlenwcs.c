@@ -6,11 +6,11 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 15:40:16 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 17:55:55 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 16:20:43 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include <wchar.h>
 
 size_t		ft_strlenwcs(wchar_t *wcs)
 {

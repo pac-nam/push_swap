@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:54:05 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 18:09:05 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 14:12:47 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define MEMORY_H
 
 # define GNL_BUFF_SIZE 100
+
+# include <stdlib.h>
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_gnl(const int fd, char **line);
