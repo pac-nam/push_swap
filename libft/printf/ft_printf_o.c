@@ -6,11 +6,14 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/11 10:27:44 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 18:25:02 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 16:15:30 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include "../header/conversion.h"
+#include "../header/memory.h"
+#include "../header/print.h"
+#include "../header/str.h"
 
 static int		ft_printf_o_rest(char *str, int *info)
 {

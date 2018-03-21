@@ -6,13 +6,13 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 14:42:06 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/07 12:32:39 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 13:51:22 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
 
-int		ft_rotate(int **pile, char **instructions, char *str)
+int		ft_rotate(int **pile, char **str, char *to_add)
 {
 	int		index;
 	int		tmp;
@@ -26,16 +26,19 @@ int		ft_rotate(int **pile, char **instructions, char *str)
 		++index;
 	}
 	(*pile)[index] = tmp;
-	strtmp = *instructions;
-	if (!(*instructions = ft_strjoin(*instructions, str)))
-		return (0);
+	strtmp = *str;
+	if (!(*str = ft_strjoin(*str, to_add)))
+		exit(1);
 	ft_strdel(&strtmp);
+	printf("|||%d|%d|%d|%d|%d|%d|%d|%d|%d|||\n"
+			, (*pile)[1], (*pile)[2], (*pile)[3], (*pile)[4], (*pile)[5]
+			, (*pile)[6], (*pile)[7], (*pile)[8], (*pile)[9]);
 	return (1);
 }
 
-int		ft_double_rotate(int **pile_a, int **pile_b, char **instructions)
+int		ft_double_rotate(int **pile_a, int **pile_b, char **str)
 {
-	ft_rotate(pile_a, instructions, "\0");
-	ft_rotate(pile_b, instructions, "rr\n");
+	if (!ft_rotate(pile_a, str, "\0") || !ft_rotate(pile_b, str, "rr\n"))
+		exit(1);
 	return (1);
 }

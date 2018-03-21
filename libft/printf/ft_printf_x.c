@@ -6,11 +6,15 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/11 10:29:26 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 18:25:48 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 16:01:18 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include <unistd.h>
+#include "../header/conversion.h"
+#include "../header/memory.h"
+#include "../header/print.h"
+#include "../header/str.h"
 
 static int		ft_printf_x_rest(char *str, int **info, int nb)
 {

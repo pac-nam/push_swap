@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 11:37:56 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/09 12:38:08 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 12:43:19 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,46 +14,37 @@
 
 //	ft_printf("a[0] %d | a[1] %d | a[2] %d | a[3] %d | a[4] %d\n", stock->a[0], stock->a[1], stock->a[2], stock->a[3], stock->a[4]);
 
-static int	ft_int_tab_is_sort(t_ps_struct *stock)
+static int	ft_int_tab_is_sort(int *a)
 {
 	int		i;
 
-	i = 1;
-	while (i < stock->a[0])
-	{
-		if (stock->a[i] > stock->a[i + 1])
+	i = 0;
+	while (++i < a[0])
+		if (a[i] > a[i + 1])
 			return (0);
-		++i;
-	}
-	free(stock->str);
-	if (!(stock->str = (char*)malloc(2)))
-		return (0);
-	stock->str[0] = '\n';
-	stock->str[1] = '\0';
 	return (1);
 }
 
-static int	ft_push_swap_end(t_ps_struct *stock)
+static int	ft_push_swap_end(int **a, int **opt)
 {
-	ft_putstr(stock->str);
-	free(stock->a);
-	free(stock->b);
-	free(stock->opt);
-	free(stock->str);
+	ft_memdel((void**)a);
+	ft_memdel((void**)opt);
 	return (0);
 }
 
 int			main(int ac, char **av)
 {
-	t_ps_struct		stock;
+	int				*opt;
+	int				*a;
 
 	if (ac < 3)
 		return (0);
-	if (!ft_init_stock(&stock, ac, av))
+	if (!ft_options(&opt, ac, av) ||
+			!ft_init_pile_a(&a, ac, av, opt))
 		return (0);
-	if (ft_int_tab_is_sort(&stock))
-		return (ft_push_swap_end(&stock));
-	if (!ft_push_swap(&stock))
+	if (ft_int_tab_is_sort(a))
+		return (ft_push_swap_end(&a, &opt));
+	if (!ft_push_swap(a))
 		return (0);
-	return (ft_push_swap_end(&stock));
+	return (ft_push_swap_end(&a, &opt));
 }

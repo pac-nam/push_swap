@@ -6,11 +6,16 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/11 10:29:26 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 18:24:40 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 16:03:07 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include <unistd.h>
+#include "../header/char.h"
+#include "../header/conversion.h"
+#include "../header/memory.h"
+#include "../header/print.h"
+#include "../header/str.h"
 
 static char		*ft_upper_all(char *str)
 {

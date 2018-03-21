@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/22 14:30:08 by tbleuse           #+#    #+#              #
-#    Updated: 2018/03/12 14:44:24 by tbleuse          ###   ########.fr        #
+#    Updated: 2018/03/21 11:58:10 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ SRC_NAME2 =	main_push_swap.c		\
 			ft_push_swap.c			\
 			ft_double_sort.c		\
 			ft_options.c			\
-			ft_init_stock.c			\
+			ft_init_pile_b.c		\
 			ft_index_of_nb.c		\
 			ft_target.c				\
 			ft_tab_is_sort.c		\

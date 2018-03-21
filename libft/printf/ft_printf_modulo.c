@@ -6,11 +6,13 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/11 10:26:58 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 18:23:59 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 16:07:01 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include <unistd.h>
+#include "../header/memory.h"
+#include "../header/print.h"
 
 int	ft_printf_modulo(int **info)
 {

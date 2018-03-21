@@ -6,13 +6,13 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 14:41:58 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/07 12:33:49 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 13:38:43 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
 
-int		ft_reverse_rotate(int **pile, char **instructions, char *str)
+int		ft_reverse_rotate(int **pile, char **str, char *to_add)
 {
 	int		index;
 	int		tmp;
@@ -26,16 +26,16 @@ int		ft_reverse_rotate(int **pile, char **instructions, char *str)
 		--index;
 	}
 	(*pile)[1] = tmp;
-	strtmp = *instructions;
-	if (!(*instructions = ft_strjoin(*instructions, str)))
+	strtmp = *str;
+	if (!(*str = ft_strjoin(*str, to_add)))
 		return (0);
 	ft_strdel(&strtmp);
 	return (1);
 }
 
-int		ft_double_reverse_rotate(int **pile_a, int **pile_b, char **instruc)
+int		ft_double_reverse_rotate(int **pile_a, int **pile_b, char **str)
 {
-	ft_reverse_rotate(pile_a, instruc, "\0");
-	ft_reverse_rotate(pile_b, instruc, "rrr\n");
+	ft_reverse_rotate(pile_a, str, "\0");
+	ft_reverse_rotate(pile_b, str, "rrr\n");
 	return (1);
 }

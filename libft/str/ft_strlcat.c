@@ -6,11 +6,12 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 13:13:30 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 16:52:44 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 16:19:55 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include "../header/memory.h"
+#include "../header/str.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

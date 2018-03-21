@@ -6,11 +6,12 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 15:40:16 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 17:51:35 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 14:02:02 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include "../header/conversion.h"
+#include "../header/memory.h"
 
 int			ft_wcs_convert(char *s, wchar_t *pwcs, int n)
 {

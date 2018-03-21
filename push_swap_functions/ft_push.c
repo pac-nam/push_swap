@@ -6,13 +6,13 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 14:41:51 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/07 12:32:05 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 13:43:24 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
 
-int		ft_push(int **put_on, int **pick_one, char **instructions, char *str)
+int		ft_push(int **put_on, int **pick_one, char **str, char *to_add)
 {
 	int		nb;
 	int		index;
@@ -30,9 +30,9 @@ int		ft_push(int **put_on, int **pick_one, char **instructions, char *str)
 		(*put_on)[index] = (*put_on)[index - 1];
 	++((*put_on)[0]);
 	(*put_on)[1] = nb;
-	strtmp = *instructions;
-	if (!(*instructions = ft_strjoin(*instructions, str)))
-		return (0);
+	strtmp = *str;
+	if (!(*str = ft_strjoin(*str, to_add)))
+		exit(1);
 	ft_strdel(&strtmp);
 	return (1);
 }

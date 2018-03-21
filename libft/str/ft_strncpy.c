@@ -6,11 +6,11 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 12:11:15 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 16:58:14 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 16:23:20 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include <stdlib.h>
 
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {

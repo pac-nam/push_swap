@@ -6,11 +6,12 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 14:47:19 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 16:31:16 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 16:11:30 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include "../header/memory.h"
+#include "../header/str.h"
 
 void		*ft_realloc(void *ptr, size_t size)
 {
