@@ -6,12 +6,11 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 07:56:53 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 14:05:27 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/06 16:24:46 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/memory.h"
-#include "../header/list.h"
+#include "../header/libft.h"
 
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {

@@ -6,15 +6,11 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/11 10:25:14 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 15:53:20 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/06 18:23:25 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include "../header/conversion.h"
-#include "../header/memory.h"
-#include "../header/print.h"
-#include "../header/str.h"
+#include "../header/libft.h"
 
 static int		ft_printf_di_zero(char **str, int *info)
 {

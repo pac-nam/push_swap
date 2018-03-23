@@ -6,11 +6,11 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 15:40:16 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 14:01:10 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/06 17:56:19 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/conversion.h"
+#include "../header/libft.h"
 
 int		ft_conv_utf8(int wbytes, wchar_t wchar, char *s)
 {

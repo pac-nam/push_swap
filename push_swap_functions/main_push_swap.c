@@ -6,13 +6,11 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 11:37:56 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/09 12:38:08 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 17:24:03 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
-
-//	ft_printf("a[0] %d | a[1] %d | a[2] %d | a[3] %d | a[4] %d\n", stock->a[0], stock->a[1], stock->a[2], stock->a[3], stock->a[4]);
 
 static int	ft_int_tab_is_sort(t_ps_struct *stock)
 {

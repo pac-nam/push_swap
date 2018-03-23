@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 11:37:56 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/12 17:31:06 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 17:24:32 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,18 +43,14 @@ static int	ft_wich_number(int **pile_a, char *line, int *option)
 		if (line[i] == 0 || line[i] == 1)
 			return (1);
 		if (line[i] != '-' && line[i] != '+' && !(ft_isdigit(line[i])))
-		{
 			return (ft_error(option[2], "wrong character in the file\n"));
-		}
 		if (!ft_increase_pile(pile_a, option))
 			return (0);
 		(*pile_a)[(*pile_a)[0]] = ft_atoi(&line[i]);
 		if (line[i] == '-' || line[i] == '+')
 			++i;
 		if (!ft_isdigit(line[i]))
-		{
 			return (ft_error(option[2], "wrong character in the file\n"));
-		}
 		while (ft_isdigit(line[i]))
 			++i;
 	}

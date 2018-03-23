@@ -6,14 +6,11 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 16:09:01 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 14:19:14 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/07 10:20:22 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
-#include "../header/conversion.h"
-#include "../header/str.h"
+#include "../header/libft.h"
 
 void	ft_putnbr(int nb)
 {
