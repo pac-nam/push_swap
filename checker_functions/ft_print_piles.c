@@ -6,11 +6,11 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/04 12:47:50 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/23 13:57:06 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/23 14:53:39 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/both_programs.h"
+#include "../header/checker.h"
 
 void	ft_print_piles(int *pile_a, int *pile_b, char *str)
 {

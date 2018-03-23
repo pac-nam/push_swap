@@ -6,11 +6,11 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 11:37:56 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/12 10:27:20 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/23 14:53:20 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/both_programs.h"
+#include "../header/checker.h"
 
 int		ft_success(int mode, char *str)
 {
