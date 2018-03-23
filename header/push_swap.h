@@ -6,27 +6,26 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 11:44:16 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/21 17:22:11 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/23 17:32:37 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "./both_programs.h"
+# include <fcntl.h>
 
-typedef struct	s_ps_struct
-{
-	int			*a;
-	int			*b;
-	int			*ref;
-	int			*opt;
-	char		*str;
-}				t_ps_struct;
+# include "../libft/header/libft.h"
 
-int				ft_push_swap(t_ps_struct *stock);
-int				ft_double_sort(t_ps_struct *stock);
-int				ft_init_stock(t_ps_struct *stock, int ac, char **av);
+int				ft_isnumber(char *str);
+int				ft_is_valid_number(char *str, int *option);
+int				ft_init_pile_a(int **pile_a, int ac, char **av, int *option);
+int				ft_error(int mode, char *str);
+
+int				ft_median(int *pile_a, int *ref);
+int				*ft_pile_cpy(int *pile);
+int				ft_push_swap(int *pile_a, int *opt);
+char			*ft_double_sort(int *pile_a);
 int				ft_options(int **options, int ac, char **av);
 int				ft_index_of_nb(int *tab, int nb);
 int				ft_target(int *tab, int ref);

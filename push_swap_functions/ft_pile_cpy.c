@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_push_swap.c                                     :+:      :+:    :+:   */
+/*   ft_pile_cpy.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/07 11:30:15 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/23 17:59:25 by tbleuse          ###   ########.fr       */
+/*   Created: 2018/03/23 14:56:12 by tbleuse           #+#    #+#             */
+/*   Updated: 2018/03/23 15:01:38 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
 
-int			ft_push_swap(int *pile_a, int *opt)
+int		*ft_pile_cpy(int *pile)
 {
-	char	*str;
+	int		*cpy;
+	int		i;
 
-	opt[0] = 0;
-	str = "Error\n";
-/*	if (pile_a[0] < 50)
-		str = ft_quick_sort(pile_a);
-	else if (pile_a[0] < 300)
-		str = ft_normal_sort(pile_a);
-	else
-*/		str = ft_double_sort(pile_a);
-	ft_putstr(str);
-	ft_strdel(&str);
-	return (1);
+	if (!(cpy = (int*)malloc(sizeof(int) * (pile[0] + 1))))
+		return (NULL);
+	i = -1;
+	while (++i <= pile[0])
+		cpy[i] = pile[i];
+	return (cpy);
 }
