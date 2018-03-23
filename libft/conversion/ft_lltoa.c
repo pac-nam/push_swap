@@ -6,11 +6,13 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:04:25 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 17:28:20 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 13:58:35 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include <limits.h>
+#include <stdlib.h>
+#include "../header/str.h"
 
 static int	ft_nb_lenght(long long nb)
 {

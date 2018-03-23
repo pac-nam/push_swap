@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/08 10:34:52 by tbleuse           #+#    #+#              #
-#    Updated: 2018/03/23 12:47:09 by tbleuse          ###   ########.fr        #
+#    Updated: 2018/03/07 11:03:05 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,10 +15,10 @@ NAME = libft
 FLAGS = -Wall -Wextra -Werror
 
 CONV_NAME	=	ft_atoi.c				\
+				ft_atoll.c				\
 				ft_itoa.c				\
 				ft_itoa_base.c			\
 				ft_lltoa.c              \
-				ft_atoll.c              \
 				ft_ulltoa_base.c        \
 				ft_wc_convert.c			\
 				ft_wcs_convert.c		\
@@ -100,6 +100,7 @@ PRINT_NAME	=	ft_putchar.c			\
 MATH_NAME	=	ft_bracket.c			\
 				ft_sqrt.c				\
 				ft_power.c				\
+				ft_random.c				\
 				ft_sort_int_tab.c		\
 
 PRINTF_NAME	=	ft_printf.c				\

@@ -6,11 +6,15 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 14:03:55 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 16:27:22 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 14:13:19 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <unistd.h>
+#include "../header/memory.h"
+#include "../header/str.h"
 
 static size_t		ft_strlen_n(const char *str)
 {

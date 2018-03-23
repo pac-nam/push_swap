@@ -6,12 +6,14 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/04 14:32:23 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 18:32:50 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 15:49:24 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PRINTF_H
 # define PRINTF_H
+
+# include <stdarg.h>
 
 int		ft_printf_di(va_list ap, int *infos);
 int		ft_printf_bouxmx(va_list ap, int *infos);

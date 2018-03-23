@@ -13,6 +13,7 @@
 #ifndef MATH_H
 # define MATH_H
 
+int		ft_random(void);
 int		ft_sqrt(int nb);
 int		ft_bracket(char *str);
 int		ft_power(int nb, int power);

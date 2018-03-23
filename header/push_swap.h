@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include <fcntl.h>
+# include <unistd.h>
 
 # include "../libft/header/libft.h"
 

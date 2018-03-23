@@ -12,9 +12,9 @@
 
 int		ft_atoi(const char *str)
 {
-	long int		nb;
-	long int		is_neg;
-	long int		i;
+	int		nb;
+	int		is_neg;
+	int		i;
 
 	nb = 0;
 	is_neg = 1;

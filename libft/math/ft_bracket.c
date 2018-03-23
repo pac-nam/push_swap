@@ -6,11 +6,9 @@
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/06 11:56:38 by exam              #+#    #+#             */
-/*   Updated: 2018/03/07 10:30:04 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 14:06:36 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "../header/libft.h"
 
 static int		ft_bracket_charcmp(char c1, char c2)
 {

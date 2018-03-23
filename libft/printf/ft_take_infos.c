@@ -6,11 +6,14 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/12 13:37:11 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 18:26:19 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 16:35:49 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include "../header/char.h"
+#include "../header/conversion.h"
+#include "../header/printf.h"
+#include "../header/str.h"
 
 static int		ft_printf_infos_z_len_pre(int **info, char *str, int max)
 {

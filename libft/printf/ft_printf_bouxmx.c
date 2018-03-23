@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_ouxmx.c                                  :+:      :+:    :+:   */
+/*   ft_printf_bouxmx.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/18 14:52:07 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/06 18:23:00 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/21 16:40:18 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/libft.h"
+#include <stdint.h>
+#include "../header/printf.h"
 
 static int		ft_printf_bouxmx_second(unsigned long long nb, int *info)
 {

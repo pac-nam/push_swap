@@ -6,15 +6,15 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 09:43:25 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/23 12:49:44 by tbleuse          ###   ########.fr       */
+/*   Updated: 2017/11/17 14:47:38 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long long		ft_atoll(const char *str)
+long long	ft_atoll(const char *str)
 {
-	long long		nb;
-	int				is_neg;
-	int				i;
+	long long	nb;
+	int		is_neg;
+	int		i;
 
 	nb = 0;
 	is_neg = 1;
