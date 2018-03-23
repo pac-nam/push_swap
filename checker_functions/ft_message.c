@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_piles.c                                   :+:      :+:    :+:   */
+/*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/04 12:47:50 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/23 13:57:06 by tbleuse          ###   ########.fr       */
+/*   Created: 2018/02/28 11:37:56 by tbleuse           #+#    #+#             */
+/*   Updated: 2018/03/12 10:27:20 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/both_programs.h"
 
-void	ft_print_piles(int *pile_a, int *pile_b, char *str)
+int		ft_success(int mode, char *str)
 {
-	int		index;
+	if (mode == 0)
+		write(1, "OK\n", 3);
+	else
+		write(1, str, ft_strlen(str));
+	return (1);
+}
 
-	index = 1;
-	ft_putstr(str);
-	write(1, "\npile_a : ", 10);
-	while (index <= pile_a[0])
-	{
-		ft_putnbr(pile_a[index++]);
-		write(1, " ", 1);
-	}
-	index = 1;
-	write(1, "\npile_b : ", 10);
-	while (index <= pile_b[0])
-	{
-		ft_putnbr(pile_b[index++]);
-		write(1, " ", 1);
-	}
-	write(1, "\n----------------------------------------\n", 42);
+int		ft_failure(int mode, char *str)
+{
+	if (mode == 0)
+		write(1, "KO\n", 3);
+	else
+		write(1, str, ft_strlen(str));
+	return (0);
+}
+
+int		ft_error(int mode, char *str)
+{
+	if (mode == 0)
+		write(2, "Error\n", 6);
+	else
+		write(2, str, ft_strlen(str));
+	return (0);
 }

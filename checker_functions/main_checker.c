@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 11:37:56 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/09 13:17:09 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/23 12:08:57 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,22 +42,24 @@ int				main(int ac, char **av)
 {
 	int		*pile_a;
 	int		*pile_b;
-	int		*options;
+	int		*opt;
 	int		count;
 
-	if (!ft_options(&options, ac, av))
+	if (ac < 2)
 		return (0);
-	if (!ft_init_pile_a(&pile_a, ac, av, options))
+	if (!ft_options(&opt, ac, av))
+		return (0);
+	if (!ft_init_pile_a(&pile_a, ac, av, opt) || !ft_verif_pile(pile_a, opt))
 		return (0);
 	if (!(pile_b = (int*)malloc(sizeof(int) * (pile_a[0] + 1))))
 		return (0);
 	pile_b[0] = 0;
-	if (options[3])
+	if (opt[3])
 		ft_print_piles(pile_a, pile_b, "start");
-	if (ft_second_main(&pile_a, &pile_b, options, &count) && options[2])
+	if (ft_second_main(&pile_a, &pile_b, opt, &count) && opt[2])
 		ft_printf("%d int(s) sorted with %d instruction(s)", pile_a[0], count);
 	free(pile_a);
 	free(pile_b);
-	free(options);
+	free(opt);
 	return (0);
 }

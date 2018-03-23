@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/22 14:30:08 by tbleuse           #+#    #+#              #
-#    Updated: 2018/03/12 14:44:24 by tbleuse          ###   ########.fr        #
+#    Updated: 2018/03/23 14:06:56 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,12 +21,17 @@ CC = gcc
 FLAGS = -Wall -Wextra -Werror
 
 SRC_NAME =	main_checker.c			\
+			ft_verif_pile.c			\
 			ft_what_to_do.c			\
 			ft_options.c			\
 			ft_swap.c				\
 			ft_push.c				\
 			ft_rotate.c				\
 			ft_reverse_rotate.c		\
+			ft_init_pile.c			\
+			ft_message.c			\
+			ft_print_piles.c		\
+			ft_is_valid_number.c	\
 
 SRC_NAME2 =	main_push_swap.c		\
 			ft_push_swap.c			\
@@ -42,7 +47,7 @@ SRC_NAME2 =	main_push_swap.c		\
 			ft_rotate.c				\
 			ft_reverse_rotate.c		\
 
-SRC_NAME3 =	ft_isnumber.c			\
+SRC_NAME3 =	ft_is_valid_number.c	\
 			ft_init_pile.c			\
 			ft_message.c			\
 			ft_print_piles.c		\
@@ -51,7 +56,7 @@ SRC = $(addprefix checker_functions/, $(SRC_NAME))
 SRC2 = $(addprefix push_swap_functions/, $(SRC_NAME2))
 SRC3 = $(addprefix both_programs_functions/, $(SRC_NAME3))
 
-OBJ = $(SRC:.c=.o) $(SRC3:.c=.o)
+OBJ = $(SRC:.c=.o)
 OBJ2 = $(SRC2:.c=.o) $(SRC3:.c=.o)
 
 all : $(LIBFT) $(NAME) $(NAME2)

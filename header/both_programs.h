@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/04 11:57:35 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/07 11:26:23 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/03/23 14:06:58 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include "../libft/header/libft.h"
 
 int			ft_isnumber(char *str);
+int			ft_is_valid_number(char *str, int *option);
 int			ft_init_pile_a(int **pile_a, int ac, char **av, int *option);
 int			ft_error(int mode, char *str);
 int			ft_success(int mode, char *str);
