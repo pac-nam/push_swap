@@ -14,6 +14,8 @@ NAME = checker
 
 NAME2 = push_swap
 
+NAME3 = make_random
+
 LIBFT = libft
 
 CC = gcc
@@ -50,13 +52,18 @@ SRC_NAME2 =	main_push_swap.c		\
 			ft_median.c				\
 			ft_error.c				\
 
+SRC_NAME3 =	main_make_random.c		\
+			ft_make_random.c		\
+
 SRC = $(addprefix checker_functions/, $(SRC_NAME))
 SRC2 = $(addprefix push_swap_functions/, $(SRC_NAME2))
+SRC3 = $(addprefix make_random_functions/, $(SRC_NAME3))
 
 OBJ = $(SRC:.c=.o)
 OBJ2 = $(SRC2:.c=.o)
+OBJ3 = $(SRC3:.c=.o)
 
-all : $(LIBFT) $(NAME) $(NAME2)
+all : $(LIBFT) $(NAME) $(NAME2) $(NAME3)
 
 $(LIBFT) :
 	@make -C $(LIBFT)
@@ -69,20 +76,30 @@ $(NAME2) : $(OBJ2)
 	@$(CC) $(FLAGS) $(OBJ2) $(LIBFT)/libft.a -o $(NAME2)
 	@echo "$(NAME2) have been compiled"
 
+$(NAME3) : $(OBJ3)
+	@$(CC) $(FLAGS) $(OBJ3) $(LIBFT)/libft.a -o $(NAME3)
+	@echo "$(NAME3) have been compiled"
+
 %.o : %.c
 	@$(CC) $(FLAGS) -c $< -o $@
 
 clean :
 	@make clean -C $(LIBFT)
-	@/bin/rm -f $(OBJ) $(OBJ2)
+	@/bin/rm -f $(OBJ) $(OBJ2) $(OBJ3)
 	@echo "$(NAME) objects have been deleted"
 	@echo "$(NAME2) objects have been deleted"
+	@echo "$(NAME3) objects have been deleted"
 
 fclean : clean
 	@make fclean -C $(LIBFT)
-	@/bin/rm -f $(NAME) $(NAME2)
+	@/bin/rm -f $(NAME) $(NAME2) $(NAME3)
 	@echo "$(NAME) have been deleted"
 	@echo "$(NAME2) have been deleted"
+	@echo "$(NAME3) have been deleted"
+
+test_clean :
+	@/bin/rm -f *_random_numbers
+	@echo "test files have been cleaned"
 
 re : fclean all
 
