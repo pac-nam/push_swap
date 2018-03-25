@@ -35,6 +35,7 @@ static int	ft_print_in_file(int *tab, int len, char *str)
                         ft_putchar_fd('\n', fd);
         }
         close(fd);
+	ft_printf("file \"%s\" randomized\n", file);
 	ft_strdel(&file);
         return (1);
 }
