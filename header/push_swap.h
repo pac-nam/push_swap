@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 11:44:16 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/23 17:32:37 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/04/19 16:59:00 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int				ft_median(int *pile_a, int *ref);
 int				*ft_pile_cpy(int *pile);
 int				ft_push_swap(int *pile_a, int *opt);
 char			*ft_double_sort(int *pile_a);
+char			*ft_cool_sort(int *pile_a);
 int				ft_options(int **options, int ac, char **av);
 int				ft_index_of_nb(int *tab, int nb);
 int				ft_target(int *tab, int ref);

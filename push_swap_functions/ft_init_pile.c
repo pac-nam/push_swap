@@ -6,7 +6,7 @@
 /*   By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/28 11:37:56 by tbleuse           #+#    #+#             */
-/*   Updated: 2018/03/23 13:35:54 by tbleuse          ###   ########.fr       */
+/*   Updated: 2018/04/18 14:34:59 by tbleuse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,25 +80,43 @@ static int	ft_init_with_file(int **pile_a, char *file, int *option)
 	return (1);
 }
 
+static int	ft_second(int **pile_a, char **av, int *option, int *spaces)
+{
+	if (!ft_is_valid_number(&av[option[0]][*spaces], option))
+		return (0);
+	ft_increase_pile(pile_a, option);
+	(*pile_a)[(*pile_a)[0]] = ft_atoi(&av[option[0]][*spaces]);
+	if (av[option[0]][*spaces] == '+' || av[option[0]][*spaces] == '-')
+		++(*spaces);
+	while (ft_isdigit(av[option[0]][*spaces]))
+		++(*spaces);
+	return (1);
+}
+
 int			ft_init_pile_a(int **pile_a, int ac, char **av, int *option)
 {
-	int	index;
+	int	spaces;
 
-	index = 1;
 	if (option[1])
 	{
 		if (option[1] >= ac)
 			return (ft_error(option[2], "missing file with flag -f\n"));
 		return (ft_init_with_file(pile_a, av[option[1]], option));
 	}
-	if (!(*pile_a = (int*)malloc(sizeof(int) * (ac - option[0] + 1))))
+	if (!(*pile_a = (int*)malloc(sizeof(int))))
 		return (0);
-	(*pile_a)[0] = ac - option[0];
+	(*pile_a)[0] = 0;
 	while (option[0] < ac)
 	{
-		if (!ft_is_valid_number(av[option[0]], option))
-			return (0);
-		(*pile_a)[index++] = ft_atoi(av[option[0]]);
+		spaces = 0;
+		while (av[option[0]][spaces])
+		{
+			while (av[option[0]][spaces] && av[option[0]][spaces] == ' ')
+				++spaces;
+			if (av[option[0]][spaces])
+				if (!ft_second(pile_a, av, option, &spaces))
+					return (0);
+		}
 		++option[0];
 	}
 	return (1);

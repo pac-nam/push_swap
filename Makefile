@@ -6,7 +6,7 @@
 #    By: tbleuse <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/22 14:30:08 by tbleuse           #+#    #+#              #
-#    Updated: 2018/03/23 17:55:11 by tbleuse          ###   ########.fr        #
+#    Updated: 2018/04/19 16:59:03 by tbleuse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,8 @@ SRC_NAME =	main_checker.c			\
 
 SRC_NAME2 =	main_push_swap.c		\
 			ft_push_swap.c			\
-			ft_new_double_sort.c	\
+			ft_double_sort.c		\
+			ft_cool_sort.c			\
 			ft_options.c			\
 			ft_pile_cpy.c			\
 			ft_index_of_nb.c		\
